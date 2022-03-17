@@ -1,0 +1,20 @@
+{
+    "name": "marsindo/ppdb-sumut-portal-22",
+    "description": "PPDB SUMUT PORTAL 2022",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Marsindo\\PpdbSumutPortal22\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Marsindo\\PpdbSumutPortal22\\" : "test"
+        }
+    },
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5.5"
+    }
+}

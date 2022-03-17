@@ -1,0 +1,106 @@
+SELECT
+c.zonasi_jarak_fix,
+c.sisa_zonasi_jarak,
+c.tidak_mampu_fix,
+c.sisa_tidak_mampu,
+c.disabilitas_fix,
+c.anak_guru_fix,
+c.pindah_tugas_fix,
+c.kesehatan_fix,
+ROUND(c.prestasi_akademik_fix + c.sisa_lomba_nonakademik, 0) AS prestasi_akademik_fix,
+c.lomba_akademik_fix,
+c.lomba_nonakademik_fix,
+c.total_kuota,
+c.zonasi_jarak_fix + c.tidak_mampu_fix + c.disabilitas_fix + c.anak_guru_fix + c.pindah_tugas_fix + c.kesehatan_fix + c.lomba_akademik_fix + c.lomba_nonakademik_fix + ROUND(c.prestasi_akademik_fix + c.sisa_lomba_nonakademik, 0) AS TOTAL
+FROM (
+
+SELECT
+b.total_kuota,
+b.zonasi_jarak_fix,
+b.sisa_zonasi_jarak,
+b.tidak_mampu_fix,
+b.sisa_tidak_mampu,
+b.disabilitas_fix,
+b.anak_guru_fix,
+b.pindah_tugas_fix,
+b.kesehatan_fix,
+ROUND(b.prestasi_akademik + b.sisa_anak_guru + b.sisa_lomba_akademik + b.sisa_tidak_mampu + b.sisa_zonasi_jarak, 2) AS prestasi_akademik_fix,
+b.lomba_akademik_fix,
+ROUND(b.lomba_nonakademik + b.sisa_lomba_akademik, 0) AS lomba_nonakademik_fix,
+CASE
+	WHEN ROUND(b.lomba_nonakademik + b.sisa_lomba_akademik, 2) - ROUND(b.lomba_nonakademik + b.sisa_lomba_akademik, 0) < 0.5 AND ROUND(b.lomba_nonakademik + b.sisa_lomba_akademik, 2) - ROUND(b.lomba_nonakademik + b.sisa_lomba_akademik, 0) > 0 THEN ROUND(b.lomba_nonakademik + b.sisa_lomba_akademik, 2) - ROUND(b.lomba_nonakademik + b.sisa_lomba_akademik, 0)
+	ELSE 0
+END AS sisa_lomba_nonakademik
+FROM (
+
+SELECT 
+a.zonasi_jarak_fix,
+a.sisa_zonasi_jarak,
+ROUND(a.tidak_mampu + a.sisa_disabilitas, 0) AS tidak_mampu_fix,
+CASE
+	WHEN ROUND(a.tidak_mampu + a.sisa_disabilitas, 2) - ROUND(a.tidak_mampu + a.sisa_disabilitas, 0) < 0.5 AND ROUND(a.tidak_mampu + a.sisa_disabilitas, 2) - ROUND(a.tidak_mampu + a.sisa_disabilitas, 0) > 0 THEN ROUND(a.tidak_mampu + a.sisa_disabilitas, 2) - ROUND(a.tidak_mampu + a.sisa_disabilitas, 0)
+	ELSE 0
+END AS sisa_tidak_mampu,
+a.disabilitas_fix, 
+ROUND(a.anak_guru + a.sisa_pindah_tugas + a.sisa_kesehatan, 0) AS anak_guru_fix,
+CASE
+	WHEN ROUND(a.anak_guru + a.sisa_pindah_tugas + a.sisa_kesehatan, 2) - ROUND(a.anak_guru + a.sisa_pindah_tugas + a.sisa_kesehatan, 0) < 0.5 AND ROUND(a.anak_guru + a.sisa_pindah_tugas + a.sisa_kesehatan, 2) - ROUND(a.anak_guru + a.sisa_pindah_tugas + a.sisa_kesehatan, 0) > 0 THEN ROUND(a.anak_guru + a.sisa_pindah_tugas + a.sisa_kesehatan, 2) - ROUND(a.anak_guru + a.sisa_pindah_tugas + a.sisa_kesehatan, 0)
+	ELSE 0
+END AS sisa_anak_guru,
+a.pindah_tugas_fix,
+a.kesehatan_fix,
+a.prestasi_akademik,
+a.lomba_akademik_fix,
+a.sisa_lomba_akademik,
+a.lomba_nonakademik,
+a.total_kuota
+
+FROM (
+
+SELECT 
+ROUND((total_kuota * 10) / 100, 0) AS zonasi_jarak_fix,
+CASE
+	WHEN ROUND((total_kuota * 10) / 100, 2) - ROUND((total_kuota * 10) / 100, 0) < 0.5 AND ROUND((total_kuota * 10) / 100, 2) - ROUND((total_kuota * 10) / 100, 0) > 0 THEN ROUND((total_kuota * 10) / 100, 2) - ROUND((total_kuota * 10) / 100, 0)
+	ELSE 0
+END AS sisa_zonasi_jarak,
+
+ROUND((total_kuota * 17) / 100, 2) AS tidak_mampu, 
+ROUND((total_kuota * 3) / 100, 0) AS disabilitas_fix, 
+CASE
+	WHEN ROUND((total_kuota * 3) / 100, 2) - ROUND((total_kuota * 3) / 100, 0) < 0.5 AND ROUND((total_kuota * 3) / 100, 2) - ROUND((total_kuota * 3) / 100, 0) > 0 THEN ROUND((total_kuota * 3) / 100, 2) - ROUND((total_kuota * 3) / 100, 0)
+	ELSE 0
+END AS sisa_disabilitas,
+
+ROUND((total_kuota * 2) / 100, 2) AS anak_guru, 
+
+ROUND((total_kuota * 2) / 100, 0) AS pindah_tugas_fix,
+CASE
+	WHEN ROUND((total_kuota * 2) / 100, 2) - ROUND((total_kuota * 2) / 100, 0) < 0.5 AND ROUND((total_kuota * 2) / 100, 2) - ROUND((total_kuota * 2) / 100, 0) > 0 THEN ROUND((total_kuota * 2) / 100, 2) - ROUND((total_kuota * 2) / 100, 0)
+	ELSE 0
+END AS sisa_pindah_tugas,
+
+ROUND((total_kuota * 1) / 100, 0) AS kesehatan_fix, 
+CASE
+	WHEN ROUND((total_kuota * 1) / 100, 2) - ROUND((total_kuota * 1) / 100, 0) < 0.5 AND ROUND((total_kuota * 1) / 100, 2) - ROUND((total_kuota * 1) / 100, 0) > 0 THEN ROUND((total_kuota * 1) / 100, 2) - ROUND((total_kuota * 1) / 100, 0)
+	ELSE 0
+END AS sisa_kesehatan,
+
+ROUND((total_kuota * 60) / 100, 2) AS prestasi_akademik, 
+
+ROUND((total_kuota * 2) / 100, 0) AS lomba_akademik_fix, 
+CASE
+	WHEN ROUND((total_kuota * 2) / 100, 2) - ROUND((total_kuota * 2) / 100, 0) < 0.5 AND ROUND((total_kuota * 2) / 100, 2) - ROUND((total_kuota * 2) / 100, 0) > 0 THEN ROUND((total_kuota * 2) / 100, 2) - ROUND((total_kuota * 2) / 100, 0)
+	ELSE 0
+END AS sisa_lomba_akademik,
+
+ROUND((total_kuota * 3) / 100, 2) AS lomba_nonakademik,
+
+total_kuota
+FROM sekolah_kuota_andika t1
+JOIN sekolah t2 ON t2.id = t1.id_sekolah
+WHERE t2.bentuk_pendidikan_id = 4 
+AND t2.id = 669
+
+) a
+) b
+) c;

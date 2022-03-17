@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Portal PPDB SUMUT 2021</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="images/logo.png" rel="icon">
+    <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- datatable -->
+    <link href="https://cdn.datatables.net/v/dt/dt-1.10.25/b-1.7.1/kt-2.6.2/r-2.2.9/datatables.min.css"
+        rel="stylesheet" />
+
+    <!-- select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@x.x.x/dist/select2-bootstrap4.min.css">
+
+    <!-- =======================================================
+  * Template Name: BizLand - v1.1.1
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+    <!-- ======= Top Bar ======= -->
+    <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+        <div class="container d-flex">
+            <div class="contact-info mr-auto">
+                <i class="icofont-envelope"></i> <a href="mailto:ppdb.sumutprov@gmail.com">ppdb.sumutprov@gmail.com</a>
+                <i class="icofont-whatsapp"></i> +6281375387002
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/ppdb.disdik.sumutprov" target="_blank" class="facebook"><i class="icofont-facebook"></i></a>
+                <a href="https://www.instagram.com/ppdbsumut/" target="_blank" class="instagram"><i class="icofont-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+
+            <h1 class="logo mr-auto"><a href="index.html">PPDB SUMUT<span> 2021</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="hasil-seleksi.html">Hasil Seleksi</a></li>
+                    <li class="active"><a href="data-pendaftar.html">Data Pendaftar</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Ucg041but7WYRGTWe5o1UVWMi3CxpwTR/view?usp=sharing">Juknis</a></li>
+                    <li><a href="zonasi-valid.html">Zonasi Valid (13 Juni - 18 Juni 2021)</a></li>
+                </ul>
+            </nav><!-- .nav-menu -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main" data-aos="fade-up">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Data Pendaftar</h2>
+                    <ol>
+                        <li><i><a href="index.html">Beranda</a></i></li>
+                        <li><i>Data Pendaftar</i></li>
+                    </ol>
+                </div>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <section class="inner-page">
+            <div class="container">
+                <div class="alert alert-info" style="color: #000;">
+                    <p>
+                        Data yang ditampilkan adalah Data Pendaftar yang registrasinya sudah diverifikasi oleh Sekolah dan Cabang Dinas.
+                        Total Kuota yang ditampilkan di Jenjang Pendidikan SMA merupakan Total Kuota keseluruhan yang belum dikurangi dengan Total Lulus Jalur  Non-Zonasi 
+                        ( Afirmasi, Perpindahan Orang Tua/Wali, Prestasi Nilai Akademik dan Prestasi Hasil Lomba).
+                       </p>
+                </div>
+                    
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Pilih Sekolah/Jurusan</span>
+                            </div>
+                            <select id="sekolah-list" class="form-control" data-allow-clear="1">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <p id="detail-sekolah-kiri"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p id="detail-sekolah-kanan"></p>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 50px;">
+                    <div class="col-md-12">
+                        <nav>
+                            <div class="nav nav-pills nav-justified" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-zonasi" data-toggle="tab" href="#navzonasi" role="tab" aria-controls="nav-home" aria-selected="true">Zonasi</a>
+                                <a class="nav-item nav-link" id="nav-afirmasi" data-toggle="tab" href="#navafirmasi" role="tab" aria-controls="nav-profile" aria-selected="false">Afirmasi</a>
+                                <a class="nav-item nav-link" id="nav-perpindahan" data-toggle="tab" href="#navperpindahan" role="tab" aria-controls="nav-contact" aria-selected="false">Perpindahan Orangtua/Wali</a>
+                                <a class="nav-item nav-link" id="nav-akademik" data-toggle="tab" href="#navakademik" role="tab" aria-controls="nav-contact" aria-selected="false">Prestasi Akademik</a>
+                                <a class="nav-item nav-link" id="nav-nonakademik" data-toggle="tab" href="#navnonakademik" role="tab" aria-controls="nav-contact" aria-selected="false">Prestasi Hasil Lomba</a>
+                            </div>
+                        </nav>
+                        <hr>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="navzonasi" role="tabpanel" aria-labelledby="nav-zonasi">
+                                <br/>
+                                <h5>Zonasi Jarak</h5>
+                                <table id="tabel-data-zonasi-umum" class="table table-striped table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th width="30">No</th>
+                                            <th width="150">No. Registrasi</th>
+                                            <th>Nama</th>
+                                            <th width="150">Skor</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <br/>
+                                <h5>Zonasi Khusus</h5>
+                                <table id="tabel-data-zonasi-khusus" class="table table-striped table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th width="30">No</th>
+                                            <th width="150">No. Registrasi</th>
+                                            <th>Nama</th>
+                                            <th width="150">Skor</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="navafirmasi" role="tabpanel" aria-labelledby="nav-afirmasi">
+                                <br/>
+                                <h5>Keluarga Tidak Mampu</h5>
+                                <table id="tabel-data-keluarga-tidak-mampu" class="table table-striped table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th width="30">No</th>
+                                            <th width="150">No. Registrasi</th>
+                                            <th>Nama</th>
+                                            <th width="150">Skor</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <br/>
+                                <h5>Penyandang Disabilitas</h5>
+                                <table id="tabel-data-disabilitas" class="table table-striped table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th width="30">No</th>
+                                            <th width="150">No. Registrasi</th>
+                                            <th>Nama</th>
+                                            <th width="150">Skor</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="navperpindahan" role="tabpanel" aria-labelledby="nav-perpindahan">
+                                <br/>
+                                <h5>Perpindahan Tugas</h5>
+                                <table id="tabel-data-perpindahan-tugas" class="table table-striped table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th width="30">No</th>
+                                            <th width="150">No. Registrasi</th>
+                                            <th>Nama</th>
+                                            <th width="150">Skor</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <br/>
+                                <h5>Anak Guru</h5>
+                                <table id="tabel-data-anak-guru" class="table table-striped table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th width="30">No</th>
+                                            <th width="150">No. Registrasi</th>
+                                            <th>Nama</th>
+                                            <th width="150">Skor</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <br/>
+                                <h5>Tenaga Kesehatan</h5>
+                                <table id="tabel-data-tenaga-kesehatan" class="table table-striped table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th width="30">No</th>
+                                            <th width="150">No. Registrasi</th>
+                                            <th>Nama</th>
+                                            <th width="150">Skor</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="navakademik" role="tabpanel" aria-labelledby="nav-akademik">
+                                <br/>
+                                <h5>Prestasi Nilai Akademik</h5>
+                                <table id="tabel-data-prestasi-nilai-akademik" class="table table-striped table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th width="30">No</th>
+                                            <th width="150">No. Registrasi</th>
+                                            <th>Nama</th>
+                                            <th width="150">Skor</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="navnonakademik" role="tabpanel" aria-labelledby="nav-nonakademik">
+                                <br/>
+                                <h5>Lomba Akademik</h5>
+                                <table id="tabel-data-lomba-akademik" class="table table-striped table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th width="30">No</th>
+                                            <th width="150">No. Registrasi</th>
+                                            <th>Nama</th>
+                                            <th width="150">Skor</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <br/>
+                                <h5>Lomba Non-Akademik</h5>
+                                <table id="tabel-data-lomba-non-akademik" class="table table-striped table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th width="30">No</th>
+                                            <th width="150">No. Registrasi</th>
+                                            <th>Nama</th>
+                                            <th width="150">Skor</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>PPDB SUMUT <span>2021</span></h3>
+                        <p>
+                            Jalan Teuku Cik Ditiro No.1-D, Kelurahan Madras Hulu, Kecamatan Medan Polonia, Kota Medan, Provinsi Sumatera Utara, Indonesia 20151
+                            <br/>
+                            <br/>
+                            <strong>WA:</strong> +6281375387002<br>
+                            <strong>Email:</strong> ppdb.sumutprov@gmail.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Tautan</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.html">Beranda</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="alur-pendaftaran.html">Alur Pendaftaran</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="data-pendaftar.html">Data Pendaftar</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="cek-pendaftaran.html">Cek Pendaftaran</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="persyaratan.html">Persyaratan</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="jadwal.html">Jadwal</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="daya-tampung.html">Daya Tampung</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-links">
+                        <h4>Cek Data Anda</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="https://pip.kemdikbud.go.id/">Kartu Indonesia Pintar (KIP)</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="https://dtks.kemensos.go.id/">Kartu Keluarga Sejahtera (KKS)</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="https://dtks.kemensos.go.id/">Kartu Bantuan Pangan Non Tunai (KBPNT)</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="https://dtks.kemensos.go.id/">Program KeluargaHarapan (PKH)</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="https://dtks.kemensos.go.id/">Kartu Bantuan Sosial Tunai (BST)</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="https://bansm.kemdikbud.go.id/akreditasi">Akreditasi SMP/Sederajat</a></li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Ikuti Kami</h4>
+                        <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> -->
+                        <div class="social-links mt-3">
+                            <a href="https://www.facebook.com/ppdb.disdik.sumutprov" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="https://www.instagram.com/ppdbsumut/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-4">
+            <div class="copyright">
+                <strong>Dinas Pendidikan Provinsi Sumatera Utara</strong>
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+                <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- datatable -->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/b-1.7.1/kt-2.6.2/r-2.2.9/datatables.min.js"></script>
+
+    <!-- select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: 'GET',
+                url: 'data/sekolah/sekolah.json',
+                async: false,
+                dataType: 'json',
+                success: function (response) {
+                    $("#sekolah-list").select2({
+                        allowClear: true,
+                        theme: 'bootstrap4',
+                        data: response,
+                        minimumInputLength: 3,
+                    });
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            // membentuk data json ke tabel biasa
+            $("#sekolah-list").change(function () {
+                var id_sekolah_kuota = $("#sekolah-list").val();
+                // var kabupaten_sekolah = $("#kabupaten-list").val();
+                var output_kiri = '';
+                var output_kanan = '';
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/sekolah/sekolah.json',
+                    async: false,
+                    dataType: 'json',
+                    success: function (response) {
+
+                        $.each(response, function (i, value) {
+                            if (value.id == id_sekolah_kuota) {
+                                output_kiri += '<table class="table table-bordered table-striped" style="font-size: 12pt;">';
+                                output_kiri += '<tr>';
+                                output_kiri += '<th>Bentuk Pendidikan</th>';
+                                output_kiri += '<td>' + value.bentuk_pendidikan + '</td>';
+                                output_kiri += '</tr>';
+                                output_kiri += '<tr>';
+                                output_kiri += '<th>Jurusan</th>';
+                                output_kiri += '<td>' + value.jurusan + '</td>';
+                                output_kiri += '</tr>';
+                                output_kiri += '<tr>';
+                                output_kiri += '<th>Nama</th>';
+                                output_kiri += '<td>' + value.nama + '</td>';
+                                output_kiri += '</tr>';
+                                output_kiri += '<tr>';
+                                output_kiri += '<th>NPSN</th>';
+                                output_kiri += '<td>' + value.npsn + '</td>';
+                                output_kiri += '</tr>';
+                                output_kiri += '<tr>';
+                                output_kiri += '<th>Alamat</th>';
+                                output_kiri += '<td>' + value.alamat + '</td>';
+                                output_kiri += '</tr>';
+                                output_kiri += '<tr>';
+                                output_kiri += '<th>Telepon</th>';
+                                output_kiri += '<td>' + value.telp + '</td>';
+                                output_kiri += '</tr>';
+                                output_kiri += '<tr>';
+                                output_kiri += '<th>Kode Pos</th>';
+                                output_kiri += '<td>' + value.kodepos + '</td>';
+                                output_kiri += '</tr>';
+                                output_kiri += '<tr>';
+                                output_kiri += '<th>Kabupaten/Kota</th>';
+                                output_kiri += '<td>' + value.kabupatenkotanama + '</td>';
+                                output_kiri += '</tr>';
+                                output_kiri += '<tr>';
+                                output_kiri += '<th>Email</th>';
+                                output_kiri += '<td>' + value.email + '</td>';
+                                output_kiri += '</tr>';
+                                output_kiri += '<tr>';
+                                output_kiri += '<th>Website</th>';
+                                output_kiri += '<td>' + value.website + '</td>';
+                                output_kiri += '</tr>';
+                                output_kiri += '<tr>';
+                                output_kiri += '<th>Koordinat</th>';
+                                output_kiri += '<td><a href="http://www.google.co.id/maps/place/' + value.koordinat + '" target="_blank">(' + value.koordinat + ')<a/></td>';
+                                output_kiri += '</tr>';
+                                output_kiri += '</table>';
+
+                                output_kanan += '<table class="table table-bordered table-striped" style="font-size: 12pt;">';
+                                output_kanan += '<tr>';
+                                output_kanan += '<th colspan="2">Zonasi Jarak</th>';
+                                output_kanan += '<td>' + value.zonasi_jarak + '</td>';
+                                output_kanan += '</tr>';
+                                output_kanan += '<tr>';
+                                output_kanan += '<th rowspan="2">Afirmasi</th>';
+                                output_kanan += '<th>Keluarga Tidak Mampu</th>';
+                                output_kanan += '<td>' + value.keluarga_tidak_mampu + '</td>';
+                                output_kanan += '</tr>';
+                                output_kanan += '<tr>';
+                                output_kanan += '<th>Disabilitas</th>';
+                                output_kanan += '<td>' + value.disabilitas + '</td>';
+                                output_kanan += '</tr>';
+                                output_kanan += '<tr>';
+                                output_kanan += '<th rowspan="3">Perpindahan Orangtua/Wali</th>';
+                                output_kanan += '<th>Perpindahan Tugas</th>';
+                                output_kanan += '<td>' + value.perpindahan_tugas + '</td>';
+                                output_kanan += '</tr>';
+                                output_kanan += '<tr>';
+                                output_kanan += '<th>Anak Guru</th>';
+                                output_kanan += '<td>' + value.anak_guru + '</td>';
+                                output_kanan += '</tr>';
+                                output_kanan += '<tr>';
+                                output_kanan += '<th>Tenaga Kesehatan</th>';
+                                output_kanan += '<td>' + value.tenaga_kesehatan + '</td>';
+                                output_kanan += '</tr>';
+                                output_kanan += '<tr>';
+                                output_kanan += '<th colspan="2">Prestasi Nilai Akademik</th>';
+                                output_kanan += '<td>' + value.prestasi_nilai_akademik + '</td>';
+                                output_kanan += '</tr>';
+                                output_kanan += '<tr>';
+                                output_kanan += '<th rowspan="2">Prestasi Hasil Lomba</th>';
+                                output_kanan += '<th>Lomba Akademik</th>';
+                                output_kanan += '<td>' + value.lomba_akademik + '</td>';
+                                output_kanan += '</tr>';
+                                output_kanan += '<tr>';
+                                output_kanan += '<th>Lomba Nonakademik</th>';
+                                output_kanan += '<td>' + value.lomba_nonakademik + '</td>';
+                                output_kanan += '</tr>';
+                                output_kanan += '<tr>';
+                                output_kanan += '<th colspan="2">Total Kuota</th>';
+                                output_kanan += '<td>' + value.total_kuota + '</td>';
+                                output_kanan += '</tr>';
+                                output_kanan += '</table>';
+
+                                $('#detail-sekolah-kiri').html(output_kiri);
+                                $('#detail-sekolah-kanan').html(output_kanan);
+
+                                return false;
+                            }
+                        });
+                    },
+                    error: function () {
+                        alert("Error!");
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // membentuk data json ke tabel biasa
+            $("#sekolah-list").change(function () {
+                var id_sekolah_kuota = $("#sekolah-list").val();
+
+                // entry = prompt("Enter your name")
+                // entryArray = id_sekolah_kuota.split("-");
+
+                $('#tabel-data-zonasi-umum').DataTable().clear().draw();
+                $('#tabel-data-zonasi-khusus').DataTable().clear().draw();
+                $('#tabel-data-keluarga-tidak-mampu').DataTable().clear().draw();
+                $('#tabel-data-disabilitas').DataTable().clear().draw();
+                $('#tabel-data-perpindahan-tugas').DataTable().clear().draw();
+                $('#tabel-data-anak-guru').DataTable().clear().draw();
+                $('#tabel-data-tenaga-kesehatan').DataTable().clear().draw();
+                $('#tabel-data-prestasi-nilai-akademik').DataTable().clear().draw();
+                $('#tabel-data-lomba-akademik').DataTable().clear().draw();
+                $('#tabel-data-lomba-non-akademik').DataTable().clear().draw();
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/sekolah/data-pendaftar/' + id_sekolah_kuota + '-zonasi-umum.json',
+                    async: false,
+                    dataType: 'json',
+                    success: function (response) {
+                        $('#tabel-data-zonasi-umum').DataTable({
+                            data: response,
+                            destroy: true,
+                            ordering: false
+                        });
+                    },
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/sekolah/data-pendaftar/' + id_sekolah_kuota + '-zonasi-khusus.json',
+                    async: false,
+                    dataType: 'json',
+                    success: function (response) {
+                        $('#tabel-data-zonasi-khusus').DataTable({
+                            data: response,
+                            destroy: true,
+                            ordering: false
+                        });
+                    },
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/sekolah/data-pendaftar/' + id_sekolah_kuota + '-zonasi-umum.json',
+                    async: false,
+                    dataType: 'json',
+                    success: function (response) {
+                        $('#tabel-data-zonasi-umum').DataTable({
+                            data: response,
+                            destroy: true,
+                            ordering: false
+                        });
+                    },
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/sekolah/data-pendaftar/' + id_sekolah_kuota + '-keluarga-tidak-mampu.json',
+                    async: false,
+                    dataType: 'json',
+                    success: function (response) {
+                        $('#tabel-data-keluarga-tidak-mampu').DataTable({
+                            data: response,
+                            destroy: true,
+                            ordering: false
+                        });
+                    },
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/sekolah/data-pendaftar/' + id_sekolah_kuota + '-disabilitas.json',
+                    async: false,
+                    dataType: 'json',
+                    success: function (response) {
+                        $('#tabel-data-disabilitas').DataTable({
+                            data: response,
+                            destroy: true,
+                            ordering: false
+                        });
+                    },
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/sekolah/data-pendaftar/' + id_sekolah_kuota + '-perpindahan-tugas.json',
+                    async: false,
+                    dataType: 'json',
+                    success: function (response) {
+                        $('#tabel-data-perpindahan-tugas').DataTable({
+                            data: response,
+                            destroy: true,
+                            ordering: false
+                        });
+                    },
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/sekolah/data-pendaftar/' + id_sekolah_kuota + '-anak-guru.json',
+                    async: false,
+                    dataType: 'json',
+                    success: function (response) {
+                        $('#tabel-data-anak-guru').DataTable({
+                            data: response,
+                            destroy: true,
+                            ordering: false
+                        });
+                    },
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/sekolah/data-pendaftar/' + id_sekolah_kuota + '-tenaga-kesehatan.json',
+                    async: false,
+                    dataType: 'json',
+                    success: function (response) {
+                        $('#tabel-data-tenaga-kesehatan').DataTable({
+                            data: response,
+                            destroy: true,
+                            ordering: false
+                        });
+                    },
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/sekolah/data-pendaftar/' + id_sekolah_kuota + '-prestasi-nilai-akademik.json',
+                    async: false,
+                    dataType: 'json',
+                    success: function (response) {
+                        $('#tabel-data-prestasi-nilai-akademik').DataTable({
+                            data: response,
+                            destroy: true,
+                            ordering: false
+                        });
+                    },
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/sekolah/data-pendaftar/' + id_sekolah_kuota + '-lomba-bidang-akademik.json',
+                    async: false,
+                    dataType: 'json',
+                    success: function (response) {
+                        $('#tabel-data-lomba-akademik').DataTable({
+                            data: response,
+                            destroy: true,
+                            ordering: false
+                        });
+                    },
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'data/sekolah/data-pendaftar/' + id_sekolah_kuota + '-lomba-bidang-non-akademik.json',
+                    async: false,
+                    dataType: 'json',
+                    success: function (response) {
+                        $('#tabel-data-lomba-non-akademik').DataTable({
+                            data: response,
+                            destroy: true,
+                            ordering: false
+                        });
+                    },
+                });
+
+            });
+        });
+    </script>
+
+</body>
+</html>
